@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingCart, User, Search } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 import SearchModal from './SearchModal';
-import { useCart } from '@/react-app/contexts/CartContext';
+import { useCart } from '@/src/react-app/contexts/CartContext';
 
 // Import all products for search
 const allProducts = [

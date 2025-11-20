@@ -1,5 +1,5 @@
 import { ShoppingCart } from 'lucide-react';
-import { useCart } from '@/react-app/contexts/CartContext';
+import { useCart } from '@/src/react-app/contexts/CartContext';
 
 interface Product {
   id: number;

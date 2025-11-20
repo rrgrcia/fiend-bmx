@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import ProductCard from '@/react-app/components/ProductCard';
+import ProductCard from '@/src/react-app/components/ProductCard';
 
 const categories = [
 'All Products',

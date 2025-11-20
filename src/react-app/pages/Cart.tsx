@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Minus, Plus, Trash2, ArrowRight, ShoppingBag } from 'lucide-react';
-import { useCart } from '@/react-app/contexts/CartContext';
+import { useCart } from '@/src/react-app/contexts/CartContext';
 
 export default function Cart() {
   const { items, updateQuantity, removeFromCart, totalPrice, totalItems } = useCart();

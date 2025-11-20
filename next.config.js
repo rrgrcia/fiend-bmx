@@ -1,3 +1,5 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -24,6 +26,17 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  // Turbopack configuration for Next.js 16+
+  turbopack: {
+    resolveAlias: {
+      '@': path.resolve(__dirname),
+    },
+  },
+  // Fallback webpack config for non-Turbopack builds
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
   },
 };
 

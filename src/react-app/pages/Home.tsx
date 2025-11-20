@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import ProductCard from '@/react-app/components/ProductCard';
-import VideoSection from '@/react-app/components/VideoSection';
+import ProductCard from '@/src/react-app/components/ProductCard';
+import VideoSection from '@/src/react-app/components/VideoSection';
 
 const heroSlides = [
   {
