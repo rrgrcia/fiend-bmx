@@ -13,12 +13,14 @@
     "next": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.6",
     "zod": "^3.24.3"
   },
   "devDependencies": {
     "@types/node": "^22.14.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
