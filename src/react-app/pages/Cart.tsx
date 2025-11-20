@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import Link from 'next/link';
 import { Minus, Plus, Trash2, ArrowRight, ShoppingBag } from 'lucide-react';
 import { useCart } from '@/react-app/contexts/CartContext';
 
@@ -16,7 +16,7 @@ export default function Cart() {
           <h2 className="text-3xl font-black text-gray-900 mb-4">Your cart is empty</h2>
           <p className="text-gray-600 mb-8">Add some items to get started</p>
           <Link
-            to="/shop"
+            href="/shop"
             className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105"
           >
             Continue Shopping
@@ -108,7 +108,7 @@ export default function Cart() {
               ))}
 
               <Link
-                to="/shop"
+                href="/shop"
                 className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold transition-colors"
               >
                 ← Continue Shopping

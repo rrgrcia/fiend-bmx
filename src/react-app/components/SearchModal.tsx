@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router';
+import Link from 'next/link';
 import { X, Search } from 'lucide-react';
 
 interface Product {
@@ -96,7 +96,7 @@ export default function SearchModal({ isOpen, onClose, products }: SearchModalPr
               {filteredProducts.map((product) => (
                 <Link
                   key={product.id}
-                  to="/shop"
+                  href="/shop"
                   onClick={handleClose}
                   className="flex items-center gap-4 p-4 hover:bg-gray-50 rounded-xl transition-colors group"
                 >

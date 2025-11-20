@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingCart, User, Search } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 import SearchModal from './SearchModal';
@@ -28,7 +29,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const { totalItems } = useCart();
 
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function Header() {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
-  }, [location]);
+  }, [pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -69,7 +70,7 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0">
               <img
                 src="https://mocha-cdn.com/019a9d77-3fdf-7e66-a0da-52236f85cde9/image.png_9354.png"
                 alt="Fiend BMX"
@@ -82,9 +83,9 @@ export default function Header() {
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 relative group ${
-                    location.pathname === link.path
+                    pathname === link.path
                       ? 'text-red-600'
                       : 'text-gray-900 hover:text-red-600'
                   }`}
@@ -92,7 +93,7 @@ export default function Header() {
                   {link.name}
                   <span
                     className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full ${
-                      location.pathname === link.path ? 'w-full' : ''
+                      pathname === link.path ? 'w-full' : ''
                     }`}
                   />
                 </Link>
@@ -109,14 +110,14 @@ export default function Header() {
                 <Search className="w-5 h-5 text-gray-900" />
               </button>
               <Link
-                to="/login"
+                href="/login"
                 aria-label="Account"
                 className="hidden md:block p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
               >
                 <User className="w-5 h-5 text-gray-900" />
               </Link>
               <Link
-                to="/cart"
+                href="/cart"
                 aria-label="Shopping Cart"
                 className="relative p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
               >

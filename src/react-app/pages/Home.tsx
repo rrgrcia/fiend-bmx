@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import ProductCard from '@/react-app/components/ProductCard';
 import VideoSection from '@/react-app/components/VideoSection';
@@ -121,7 +121,7 @@ export default function Home() {
                   {slide.subtitle}
                 </p>
                 <Link
-                  to="/shop"
+                  href="/shop"
                   className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Shop Now
@@ -185,7 +185,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link
-              to="/shop"
+              href="/shop"
               className="inline-flex items-center px-8 py-4 bg-black hover:bg-red-600 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105"
             >
               View All Products

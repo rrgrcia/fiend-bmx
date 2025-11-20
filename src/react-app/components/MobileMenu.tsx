@@ -1,4 +1,5 @@
-import { Link, useLocation } from 'react-router';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface NavLink {
   name: string;
@@ -11,7 +12,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, navLinks }: MobileMenuProps) {
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <div
@@ -25,9 +26,9 @@ export default function MobileMenu({ isOpen, navLinks }: MobileMenuProps) {
           {navLinks.map((link) => (
             <Link
               key={link.path}
-              to={link.path}
+              href={link.path}
               className={`block py-3 px-4 text-lg font-semibold uppercase tracking-wider rounded-lg transition-all duration-200 ${
-                location.pathname === link.path
+                pathname === link.path
                   ? 'bg-red-600 text-white'
                   : 'text-gray-900 hover:bg-gray-100'
               }`}

@@ -28,10 +28,9 @@ const categories = [
 
 // Sample product data (trimmed for brevity; you can keep all products)
 const allProducts = [
-{ id: 1, name: 'Fiend Garrett Complete', category: 'Complete Bikes', price: 999.99, image: '[https://fiendbmx.com/cdn/shop/files/GARRETT_BLK_L1.jpg?v=1750795421](https://fiendbmx.com/cdn/shop/files/GARRETT_BLK_L1.jpg?v=1750795421)', inStock: true },
-{ id: 2, name: 'Fiend Lew Complete', category: 'Complete Bikes', price: 999.99, image: '[https://fiendbmx.com/cdn/shop/files/MILLS_WHT_L1_5744fd82-6425-4158-b117-448b18ef1a24.jpg?v=1750796585](https://fiendbmx.com/cdn/shop/files/MILLS_WHT_L1_5744fd82-6425-4158-b117-448b18ef1a24.jpg?v=1750796585)', inStock: true },
-{ id: 3, name: 'Fiend Mills Frame', category: 'Frames', price: 449.99, image: '[https://fiendbmx.com/cdn/shop/files/MILLS_BLU.jpg?v=1734026783](https://fiendbmx.com/cdn/shop/files/MILLS_BLU.jpg?v=1734026783)', inStock: true },
-// … add all other products here
+{ id: 1, name: 'Fiend Garrett Complete', category: 'Complete Bikes', price: 999.99, image: 'https://fiendbmx.com/cdn/shop/files/GARRETT_BLK_L1.jpg?v=1750795421', inStock: true },
+{ id: 2, name: 'Fiend Lew Complete', category: 'Complete Bikes', price: 999.99, image: 'https://fiendbmx.com/cdn/shop/files/MILLS_WHT_L1_5744fd82-6425-4158-b117-448b18ef1a24.jpg?v=1750796585', inStock: true },
+{ id: 3, name: 'Fiend Mills Frame', category: 'Frames', price: 449.99, image: 'https://fiendbmx.com/cdn/shop/files/MILLS_BLU.jpg?v=1734026783', inStock: true },
 ];
 
 export default function Shop() {
@@ -50,15 +49,26 @@ if (sortBy === 'name') return a.name.localeCompare(b.name);
 return 0;
 });
 
-return ( <div className="min-h-screen bg-gray-50">
-{/* Hero Banner */} <section className="relative h-80 bg-gradient-to-br from-black via-gray-900 to-red-900 overflow-hidden"> <div className="absolute inset-0 bg-black/30" /> <div className="absolute inset-0 flex items-center justify-center"> <div className="text-center text-white px-4"> <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight">
-Shop </h1> <p className="text-xl md:text-2xl font-semibold max-w-2xl mx-auto">
-Premium BMX bikes and parts engineered for performance </p> </div> </div> </section>
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Banner */}
+      <section className="relative h-80 bg-gradient-to-br from-black via-gray-900 to-red-900 overflow-hidden">
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight">
+              Shop
+            </h1>
+            <p className="text-xl md:text-2xl font-semibold max-w-2xl mx-auto">
+              Premium BMX bikes and parts engineered for performance
+            </p>
+          </div>
+        </div>
+      </section>
 
-```
-  {/* Shop Content */}
-  <div className="container mx-auto px-4 py-12">
-    <div className="flex flex-col lg:flex-row gap-8">
+      {/* Shop Content */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col lg:flex-row gap-8">
       {/* Sidebar */}
       <aside className="lg:w-64 flex-shrink-0">
         <div className="bg-white rounded-2xl p-6 shadow-md sticky top-24">
@@ -127,10 +137,8 @@ Premium BMX bikes and parts engineered for performance </p> </div> </div> </sect
           </div>
         )}
       </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-```
-
-);
+  );
 }

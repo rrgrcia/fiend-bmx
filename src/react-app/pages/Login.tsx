@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router';
+import Link from 'next/link';
 import { User, Lock, Mail } from 'lucide-react';
 
 export default function Login() {
@@ -10,7 +10,7 @@ export default function Login() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <Link to="/">
+          <Link href="/">
             <img
               src="https://mocha-cdn.com/019a9d77-3fdf-7e66-a0da-52236f85cde9/image.png_9354.png"
               alt="Fiend BMX"
@@ -145,7 +145,7 @@ export default function Login() {
         {/* Back to Shop */}
         <div className="mt-6 text-center">
           <Link
-            to="/shop"
+            href="/shop"
             className="text-sm font-semibold text-gray-600 hover:text-red-600 transition-colors"
           >
             ← Back to shop

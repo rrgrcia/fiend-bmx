@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import Link from 'next/link';
 import { Instagram, Youtube, Facebook } from 'lucide-react';
 
 export default function Footer() {
@@ -21,22 +21,22 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4 uppercase tracking-wider">Shop</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Complete Bikes
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Frames
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Parts
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/shop" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Apparel
                 </Link>
               </li>
@@ -48,22 +48,22 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4 uppercase tracking-wider">Support</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Shipping & Returns
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Warranty
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
+                <Link href="/contact" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Distributor List
                 </Link>
               </li>
@@ -123,10 +123,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p>&copy; {currentYear} Fiend BMX. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/contact" className="hover:text-red-600 transition-colors">
+              <Link href="/contact" className="hover:text-red-600 transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/contact" className="hover:text-red-600 transition-colors">
+              <Link href="/contact" className="hover:text-red-600 transition-colors">
                 Terms of Use
               </Link>
             </div>
